@@ -1,19 +1,17 @@
 **** LOOKING FOR THE ZIP FILE TO DOWNLOAD? ************************************
-If you're on already at https://github.com/cantonbecker/bitcoinpaperwallet
+If you're on already at https://github.com/lordhelmut/bitcoinpaperwallet
 Then just look for the button that says "Download ZIP". Look to your right -->
 *******************************************************************************
 
-*** bitcoinpaperwallet.com ***
+*** Paper Wallet for Merchants ***
 
-This project is a fork of bitaddress.org, the original trustworthy
+This project is a fork of bitcoinpaperwallet, which is a fork of bitaddress.org, the original trustworthy
 JavaScript powered offline bitcoin address generator. 
 
-This attractive paper wallet design is two-sided and folds up to
-hide the private key. Optional tamper-evident hologram tape and/or a live-boot
-Ubuntu CD with this software pre-installed can be purchased from bitcoinpaperwallet.com 
-to provide additional security against snooping.
+This unique paper wallet design is for merchants to display by their point of sale or store windows.
+The private key is removed, and cleverly folds over itself to further hide the generated codes.
 
-This generator includes the same pseudorandom key generation as bitaddress.org, as
+This generator includes the same pseudo-random key generation as bitaddress.org, as
 well as support for creating wallets using "vanity keys", passphrases ("brain wallets")
 or even rolling dice or shuffling cards.
 
@@ -21,7 +19,7 @@ As of March 1, 2014, this generator also includes support and designs for making
 Litecoin and Dogecoin wallets.
 
 Use the "verify" tab to decrypt a BIP38 password-encrypted wallet, check the
-integrity of any private key, or even duplicate an exising wallet by scanning its
+integrity of any private key, or even duplicate an existing wallet by scanning its
 QR code.
 
 *** HOW TO USE THIS GENERATOR ***
@@ -44,12 +42,13 @@ Windows system print dialog will produce corrupted/illegible keys.
 QR scanning works best using Firefox since Chrome will not access the camera controls
 when opening a locally saved HTML file.
 
-*** COMPARED WITH BITADDRESS.ORG ***
+*** COMPARED WITH BITADDRESS.ORG and bitcoinpaperwallet.org ***
+New design for displaying codes for merchants.
 
 Images and resources have been moved out of the .html file (where they were
 base-64 encoded) and into an images directory to make the code easier to review.
 
-All cryptographic functions are verifiably identical to those in bitaddress.org.
+All cryptographic functions are verifiabley identical to those in bitaddress.org.
 (Run a "diff" between this project and bitaddress.org if you want to be sure.)
 
 *** HOW TO VERIFY THE AUTHENTICITY OF THIS DOWNLOAD ***
@@ -58,9 +57,8 @@ After downloading the ZIP package for this generator, you should find a file
 named generate-wallet.html.sig which you can use to:
 
 * Verify that generate-wallet.html hasn't been tampered with, and
-* Get proof that it really was authored by Canton Becker (canton@gmail.com) 
-  whose GPG public key and fingerprint should be confirmed at http://cantonbecker.com
-  and/or by searching bitcointalk.org, etc.
+* Get proof that it really was authored by Entropy Technology.  
+The PGP key can be found at https://www.entropytechnology.com/pgp.asc
   
 For example, if you have GPG installed, you should be able cd to the appropriate 
 directory and type in these two commands:
@@ -68,78 +66,34 @@ directory and type in these two commands:
   gpg --recv-key 36E1D9B6
   gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html 
 
-And then verify the resulting signature's fingerprint against Canton Becker's
-published fingerprint at http://cantonbecker.com
 
 If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
 
+*** THANKS ***
 
-*** DONATIONS ***
+Special thanks to pointbiz/bitaddress.org and Artiom Chilaru/flexlabs.org, 
+and Canton Becker for their significant contributions to this software.
 
-To support ongoing development of this project, please consider making a donation or
-purchasing wallet-making supplies or the Ubuntu LiveCD with this software here:
+Optional tamper-evident hologram tape and/or a live-boot
+Ubuntu CD with this software pre-installed can be purchased from bitcoinpaperwallet.com 
+to provide additional security against snooping.
 
-https://bitcoinpaperwallet.com/#purchase
-https://bitcoinpaperwallet.com/#donate
+*** LICENSES ***
 
-Special thanks to pointbiz/bitaddress.org and Artiom Chilaru/flexlabs.org for 
-their significant contributions to this software.
-
-*** LICENSE ***
-
-© Copyright 2014 Canton Becker. This software may be modified and redistributed as 
-per the MIT/GPL/BSD/Apache licenses included in the HTML and JavaScript source. However, 
-the bitcoinpaperwallet.com logo, hologram sticker design, and folding paper wallet design 
-are copyrighted and may not be modified or redistributed without permission excepting 
-for personal use. 
-
-
-{{{{ THIS SOFTWARE AND SERVICE IS PROVIDED WITHOUT WARRANTY. USE AT YOUR OWN RISK. }}}}
-
-- Canton Becker
-http://cantonbecker.com
-canton@gmail.com
-
-
-
-----------------------------------------------------------
---- The original bitaddress.org README continues below ---
-----------------------------------------------------------
-
-Now Bitcoin addresses and their corresponding private key can be conveniently 
-generated in a web browser.
-
-The bitaddress.org project provides an all-in-one HTML document with embedded
-JavaScript/Css/Images. The JavaScript is readable not minified and contains no
-XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the 
-JavaScript locally and trust that the JavaScript did not change after being 
-loaded. 
-
-Here is a link to the BitcoinTalk.org forum topic discussing this project:
-https://bitcointalk.org/index.php?topic=43496.0
-
-
-Please send DONATIONS for this project to Bitcoin Address: 
-1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
-
-
-END USER NOTES: 
- 1) To print QRCode in IE8 you must enable the "Print Background Colors and 
-    Images" checkbox on the "Page Setup" screen.
- 2) For Bulk Wallet I recommended using Google Chrome, it's the fastest.
- 3) Requires IE8+, Firefox, Chrome or sufficient JavaScript support.
- 4) Mobile Safari only works with iPhone4 or newer devices.
-    Older devices timeout while executing JavaScript.
- 5) DO NOT use Opera Mini it renders JavaScript output server side, therefore
-    they might record the private key you generated.
- 6) Art Wallet does not work properly in IE8 due to CSS limitations.
-
-
+This software may be modified and redistributed as 
+per the MIT licenses included in the HTML and JavaScript source. 
+ 
 Notice of Copyrights and Licenses:
 ---------------------------------------
 The bitaddress.org project, software and embedded resources are copyright bitaddress.org. 
 The bitaddress.org name and logo are not part of the open source license.
+
+The bitcoinpaperwallet.com logo, hologram sticker design, and folding paper wallet design 
+are copyrighted (© Copyright 2014 Canton Becker) and may not be modified or redistributed without permission excepting 
+for personal use. 
+
+The Merchant wallet design is free to use under the MIT licenses.
 
 Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights 
 of others. The individual copyrights are included throughout the document along with their 
